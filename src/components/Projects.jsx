@@ -1,61 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, ExternalLink } from 'lucide-react';
-
-const projects = [
-    {
-        title: 'PulmoScan',
-        subtitle: 'Lung Cancer Classification',
-        problem: 'Early detection of lung cancer is challenging and prone to human error.',
-        approach: 'Built a deep learning model to classify lung CT scans with high accuracy.',
-        tech: ['Python', 'TensorFlow', 'Keras', 'OpenCV'],
-        outcome: 'Achieved 95% accuracy in classifying benign vs malignant nodules.',
-        image: '/pulmoscan.png',
-        color: 'from-blue-500 to-indigo-500',
-        github: 'https://github.com/sahil-008-ops/PULMO-SCAN'
-    },
-    {
-        title: 'Foody Go',
-        subtitle: 'MERN Platform',
-        problem: 'Inefficient food delivery ordering systems lacking real-time tracking.',
-        approach: 'Developed a full-stack platform with user, vendor, and rider dashboards.',
-        tech: ['MongoDB', 'Express', 'React', 'Node.js'],
-        outcome: 'Streamlined order lifecycle, reducing average wait time tracking errors.',
-        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800',
-        color: 'from-orange-500 to-red-500'
-    },
-    {
-        title: 'AI in SCM',
-        subtitle: 'Demand Forecasting',
-        problem: 'Supply chain inefficiencies leading to overstock and stockouts.',
-        approach: 'Implemented time-series forecasting models using historical sales data.',
-        tech: ['Python', 'Pandas', 'Scikit-Learn', 'Power BI'],
-        outcome: 'Optimized inventory levels, projected to save 15% in carrying costs.',
-        image: '/Ai Driven SCM.png',
-        color: 'from-emerald-500 to-teal-500'
-    },
-    {
-        title: 'CodeGuardian-AI',
-        subtitle: 'AI-Powered Code Review & Quality Analysis',
-        problem: 'Manual code reviews are time-consuming and often miss bugs, security issues, and code quality problems, leading to slower development and technical debt.',
-        approach: 'Built an AI-powered tool that analyzes source code using static analysis and intelligent pattern detection to automatically identify issues and generate structured improvement suggestions.',
-        tech: ['Python', 'AI / ML', 'Static Analysis', 'NLP'],
-        outcome: 'Improved code quality consistency, reduced manual review effort, and enabled earlier detection of potential bugs and security risks.',
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
-        color: 'from-purple-500 to-pink-500',
-        github: 'https://github.com/sahil-008-ops/CodeGuardian-AI'
-    },
-    {
-        title: 'EchoSense-AI',
-        subtitle: 'AI-Based Audio Event Detection & Recognition',
-        problem: 'Detecting and classifying meaningful audio events (e.g., alarms, speech, environmental sounds) manually or with traditional methods is inefficient and error-prone, especially across varied sound environments.',
-        approach: 'Built EchoSense-AI, an AI-driven audio event detection system using signal processing and machine learning models to analyze audio input, identify key sound events, and classify them accurately in real time.',
-        tech: ['Python', 'Signal Processing', 'Machine Learning', 'Audio Analysis'],
-        outcome: 'Achieved reliable detection and classification of key audio events, improving accuracy over baseline methods and enabling potential integrations for monitoring systems, smart assistants, and sound analytics workflows.',
-        image: '/Echosense.png',
-        color: 'from-blue-400 to-cyan-500',
-        github: 'https://github.com/sahil-008-ops/EchoSense-AI'
-    }
-];
+import { Github, ExternalLink } from 'lucide-react';
+import { projects } from '../data/portfolioData';
 
 export default function Projects() {
     return (

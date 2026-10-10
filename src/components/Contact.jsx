@@ -1,31 +1,31 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, MapPin, ArrowUpRight } from 'lucide-react';
-
-const contactLinks = [
-    {
-        name: 'Email',
-        value: 'sahilkochar08@gmail.com',
-        icon: <Mail size={24} />,
-        href: 'mailto:sahilkochar08@gmail.com',
-        color: 'hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-900/20 dark:hover:text-blue-400'
-    },
-    {
-        name: 'LinkedIn',
-        value: 'linkedin.com/in/sahilkochar08',
-        icon: <Linkedin size={24} />,
-        href: 'https://www.linkedin.com/in/sahilkochar08',
-        color: 'hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-900/20 dark:hover:text-indigo-400'
-    },
-    {
-        name: 'GitHub',
-        value: 'github.com/sahil-008-ops',
-        icon: <Github size={24} />,
-        href: 'https://github.com/sahil-008-ops',
-        color: 'hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white'
-    }
-];
+import { Mail, Linkedin, Github, ArrowUpRight } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 
 export default function Contact() {
+    const contactLinks = [
+        {
+            name: 'Email',
+            value: personalInfo.email,
+            icon: <Mail size={24} />,
+            href: `mailto:${personalInfo.email}`,
+            color: 'hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-900/20 dark:hover:text-blue-400'
+        },
+        {
+            name: 'LinkedIn',
+            value: personalInfo.linkedin.replace('https://www.', ''),
+            icon: <Linkedin size={24} />,
+            href: personalInfo.linkedin,
+            color: 'hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-900/20 dark:hover:text-indigo-400'
+        },
+        {
+            name: 'GitHub',
+            value: personalInfo.github.replace('https://', ''),
+            icon: <Github size={24} />,
+            href: personalInfo.github,
+            color: 'hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white'
+        }
+    ];
     return (
         <section id="contact" className="scroll-mt-32">
             <div className="glass-card rounded-[3rem] p-8 md:p-16 relative overflow-hidden flex flex-col items-center text-center">

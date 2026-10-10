@@ -1,27 +1,12 @@
 import { motion } from 'framer-motion';
 import { Code2, BarChart3, Settings, Wrench } from 'lucide-react';
+import { skillCategories } from '../data/portfolioData';
 
-const skillCategories = [
-    {
-        title: 'Technical Skills',
-        icon: <Code2 size={24} className="text-blue-500" />,
-        skills: ['Python', 'SQL', 'TensorFlow', 'Hugging Face', 'Flask']
-    },
-    {
-        title: 'Data & Analytics',
-        icon: <BarChart3 size={24} className="text-purple-500" />,
-        skills: ['Power BI', 'Advanced Excel', 'KPI Tracking', 'Dashboards']
-    },
-    {
-        title: 'Product & Operations',
-        icon: <Settings size={24} className="text-green-500" />,
-        skills: ['Process Improvement', 'QA Pipelines', 'Stakeholder Management']
-    },
-    {
-        title: 'Tools & Ecosystem',
-        icon: <Wrench size={24} className="text-orange-500" />,
-        skills: ['Git', 'Postman', 'Jupyter', 'n8n']
-    }
+const categoryIcons = [
+    <Code2 size={24} className="text-blue-500" />,
+    <BarChart3 size={24} className="text-purple-500" />,
+    <Settings size={24} className="text-green-500" />,
+    <Wrench size={24} className="text-orange-500" />
 ];
 
 export default function Skills() {
@@ -55,7 +40,7 @@ export default function Skills() {
 
                         <div className="mb-6 flex items-center gap-4">
                             <div className="p-3 bg-white dark:bg-[#1a1a1a] rounded-xl shadow-sm border border-gray-100 dark:border-white/5 group-hover:scale-110 transition-transform duration-300">
-                                {category.icon}
+                                {categoryIcons[idx % categoryIcons.length]}
                             </div>
                             <h3 className="text-lg font-bold">{category.title}</h3>
                         </div>
