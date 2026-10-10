@@ -82,6 +82,16 @@ export const skillCategories = [
 
 export const experiences = [
     {
+        company: "Next Nation",
+        role: "Founder's Office Intern",
+        period: "Sept 2026 – Present",
+        points: [
+            "Working directly with the Founder's Office on strategic initiatives, business growth, and operations scaling.",
+            "Driving cross-functional execution across product expansion, key partnerships, and process optimization.",
+            "Analyzing operational bottlenecks and implementing data-driven frameworks to improve organizational throughput."
+        ]
+    },
+    {
         company: "Interviewbit Software Services Pvt. Ltd. (Scaler)",
         role: "Program Operations Intern",
         period: "12/2025 – 08/2026",
